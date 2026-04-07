@@ -1,8 +1,30 @@
 body{
+    padding: 0;
+    margin: 0;
     background-image: url(assets/img.png);
     background-repeat:no-repeat;
     background-size: cover;
 }
 form{
     width: 40%;
+}
+h1{
+    font-size: 60;
+    color: red;
+}
+h4{
+    font-size: 20;
+}
+input{
+    width: 450px;
+    padding: 10px;
+}
+select{
+    width: 225px;
+    padding: 10px;
+}
+button{
+    width: 100px;
+    padding: 10px;
+
 }
