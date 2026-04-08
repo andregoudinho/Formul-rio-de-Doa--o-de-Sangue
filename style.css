@@ -32,3 +32,6 @@ button{
     display: none;
     margin top: 20px;
 }
+.mostrar{
+    display: block;
+}

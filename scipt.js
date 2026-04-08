@@ -58,7 +58,7 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
 function mostrarDoadores() {
     let lista = document.getElementById("listaDoadores");
 
-    lista.style.display = "block";
+    lista.classList.add("mostrar");
     lista.innerHTML = "<h3>Doadores cadastrados:</h3>";
 
     doadores.forEach(function (d) {
