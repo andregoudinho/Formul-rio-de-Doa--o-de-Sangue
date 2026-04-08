@@ -33,7 +33,7 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
     let mensagemErro = document.getElementById("mensagemErro");
 
     if (erro !== "") {
-        mensagemErro.textContent = erro;
+        alert(erro);
         return;
     }
     mensagemErro.textContent = "";
@@ -55,3 +55,15 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
     document.getElementById("formDoacao").reset();
 });
 
+function mostrarDoadores() {
+    let lista = document.getElementById("listaDoadores");
+    lista.innerHTML = "<h3>Doadores cadastrados:</h3>";
+    doadores.forEach(function (d) {
+        lista.innerHTML += `
+        <p> 
+        <strong>${d.nome}</strong> - ${d.tipoSanguineo} <br>
+        ${d.cidade} - ${d.estado} 
+        </p>
+        `;
+    });
+}
