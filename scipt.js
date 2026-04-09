@@ -50,23 +50,23 @@ document.getElementById("formDoacao").addEventListener("submit", function (e) {
     };
 
     doadores.push(doador);
-    mostrarDoadores();
-    document.getElementById("formDoacao").reset();
-    alert("Cadastro realizado com sucesso!")
+
+alert(`
+    Cadastro realizado com sucesso!
+
+    Nome: ${nome}
+    Email: ${email}
+    Idade: ${idade}
+    Peso: ${peso} kg
+    Tipo Sanguíneo: ${tipoSanguineo}
+    Telefone: ${telefone}
+    Cidade: ${cidade}
+    Estado: ${estado}
+    `);
+
+    console.log(doadores);
+
+    form.reset();
 });
 
-function mostrarDoadores() {
-    let lista = document.getElementById("listaDoadores");
 
-    lista.classList.add("mostrar");
-    lista.innerHTML = "<h3>Doadores cadastrados:</h3>";
-
-    doadores.forEach(function (d) {
-        lista.innerHTML += `
-        <p> 
-        <strong>${d.nome}</strong> - ${d.tipoSanguineo} <br>
-        ${d.cidade} - ${d.estado} 
-        </p>
-        `;
-    });
-}
